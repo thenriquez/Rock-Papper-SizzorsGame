@@ -1,5 +1,6 @@
 $(document).ready(function() {
  
+
 var chromeButton= document.getElementById('ChromeButton');
 var edgeButton  = document.getElementById('EdgeButton');
 var fireboxButton = document.getElementById('FireFoxButton');
@@ -15,16 +16,20 @@ var tie = 'Tie!<br />';
 var c = 'Chrome!';
 var e = 'Edge!';
 var f = 'Firefox!';
-var compChoice;
+var compChoice; 
+
+
+
+
 
 function randChoice() {
     var shuffle = Math.random();
-    if (shuffle <= 0.100) {
+    if (shuffle <= 0.34) {
         return 'chrome';
     } else if (shuffle <= 0.67) {
         return 'edge';
     } else {
-        return 'chrome';
+        return 'firefox';
     }
 }
 
@@ -47,11 +52,11 @@ function main(w, one, two, three, four, five, six) {
         num.innerHTML = "";
         you.innerHTML = w;
         compChoice = randChoice();
-        if (compChoice == 'Chrome') {
+        if (compChoice == 'chrome') {
             comp.innerHTML = c;
             result.innerHTML = one;
             cresult.innerHTML = two;
-        } else if (compChoice == 'Edge') {
+        } else if (compChoice == 'edge') {
             comp.innerHTML = e;
             result.innerHTML = three;
             cresult.innerHTML = four;
